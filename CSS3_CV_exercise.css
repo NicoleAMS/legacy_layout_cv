@@ -1,0 +1,189 @@
+/* COLOURS
+
+teal: #006E60;
+aqua: #3aaa9b;
+light-grey: #F0EEF1;
+grey: #BDC1CC;
+
+*/
+
+/* FONT FACES */
+
+@font-face {
+  font-family: 'Alex Brush Regular';
+  src: url('./fonts/AlexBrush-Regular.ttf') format('truetype'),
+       url('./fonts/alexbrush-regular-webfont.woff') format('woff'),
+       url('./fonts/alexbrush-regular-webfont.woff2') format('woff2')
+  ;
+}
+
+@font-face {
+  font-family: 'Source-Sans';
+  src: url('./fonts/SourceSansPro-Light.otf') format('opentype'),
+       url('./fonts/sourcesanspro-light-webfont.woff') format('woff'),
+       url('./fonts/sourcesanspro-light-webfont.woff2') format('woff2')
+  ;
+}
+
+@font-face {
+  font-family: : 'Source-Sans-Regular';
+  src: url('./fonts/SourceSansPro-Regular.otf') format('opentype'),
+       url('./fonts/sourcesanspro-regular-webfont.woff') format('woff'),
+       url('./fonts/sourcesanspro-regular-webfont.woff2') formt('woff2')
+  ;
+}
+
+/* GENERAL */
+* {
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: 'Source-Sans', arial, serif;
+}
+
+/* ASIDE */
+
+aside, main {
+  display: inline-block;
+}
+
+aside {
+  width: 10%;
+  background-image: linear-gradient(to bottom right, #006E60, #3aaa9b);
+  vertical-align: top;
+  padding-bottom: 40px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+}
+
+aside p, aside h2 {
+  padding-left: 25px;
+}
+
+aside p {
+  font-size: 14px;
+}
+
+/* MAIN */
+
+main {
+  width: 90%;
+  padding: 20px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  background-image: url("./images/cityscape.jpg"), repeating-linear-gradient(#BDC1CC, white 8%, #BDC1CC 2000%);
+  background-position: bottom left;
+  background-repeat: repeat-x;
+}
+
+.about {
+  text-align: center;
+}
+
+/* SECTIONS */
+
+section {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.text-wrapper {
+  margin: 0 15px 0 35px;
+}
+
+.experience, .skills, .education {
+  width: 33%;
+}
+
+h3 {
+  display: inline-block;
+  margin-bottom: 0;
+}
+
+.time {
+  float: right;
+}
+
+/* FONTS */
+
+
+h1 {
+  font-family: 'Alex Brush Regular', arial, serif;
+  font-size: 56px;
+  margin-bottom: 0;
+}
+
+h2, h3, h4, p strong {
+  font-family: 'Source-Sans-Regular', arial, serif;
+}
+
+p, li {
+  font-size: 1.1em;
+}
+
+p em {
+  font-size: 0.9em;
+}
+
+/* IMAGE */
+
+.about img {
+  border: 5px groove #3aaa9b;
+}
+
+/* TEXT COLOUR */
+
+.teal-color {
+  color: #006E60;
+}
+
+.aqua-color {
+  color: #3aaa9b;
+}
+
+/* MEDIA QUERIES */
+
+@media screen and (max-width: 1023px) {
+  aside {
+    display: none;
+  }
+
+  main {
+    width: 100%;
+    position: relative;
+    padding: 0;
+    display: block;
+  }
+
+  header, section, .experience, .skills, .education {
+    display: block;
+    width: 95%;
+    margin: auto;
+  }
+
+  header {
+     padding: 20px 0;
+  }
+
+  section {
+    padding-bottom: 20px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  h3 {
+    display: block;
+    margin-bottom: initial;
+  }
+
+  .time {
+    float: initial;
+  }
+
+}

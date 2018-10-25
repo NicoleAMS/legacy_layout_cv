@@ -1,0 +1,4 @@
+section, aside, main {
+  display: inline;
+  zoom: 1;
+}
